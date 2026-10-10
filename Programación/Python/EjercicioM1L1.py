@@ -1,9 +1,16 @@
-#Los empleados del departamento de desarrollo han enviado una solicitud por la compra de computadoras y componentes:
-#6 laptops por 55480 dólares cada pieza;
-#3 monitores por 21830 dólares cada pieza;
-#11 mouse de computadora por 411 dolares cada pieza;
-#5 teclados por 290 dólares cada pieza;
+#La empresa tiene 5000 GB de almacenamiento de datos. El tamaño de un archivo es de 256 GB.
+#La empresa recibió 20 archivos para almacenamiento no puede contener todos los datos.
+#¿Cuántos archivos se pueden colocar en el almacenamiento?
+#¿Cuánto espacio libre quedará?
 
-#Ayúdelos a calcular la cantidada  que la empresa debe asiganr de presupuesto. Aplique estilo al resultado de los cálculos como se muestra en la imagen.
+#Escriba un programa que realice los cálculos. Dé estilos a la respuestas como se muresta en la imagen.
 
-print('Debe asignarse:', 6 * 55480 + 3 * 21830 + 11 * 411 + 5 * 290)
+archivos = 20
+almacenamiento_total = 5000  # en GB
+tamano_archivo = 256
+
+cantidad_archivos = almacenamiento_total // tamano_archivo  # cantidad de archivos que se pueden almacenar
+quedaran = almacenamiento_total - cantidad_archivos*tamano_archivo
+
+print('El almacenamiento puede contener', cantidad_archivos, 'archivos')
+print('Quedarán', quedaran, 'GB restantes')
